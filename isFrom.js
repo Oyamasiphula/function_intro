@@ -9,18 +9,17 @@ var listAllRegsFrom = function(regNos, location) {
                 fromLocationRegList.push(regNumbersArr[i])
           }
     };
-
     console.log(fromLocationRegList);
     return fromLocationRegList;
 };
 
-    var FromNkandla = listAllRegsFrom('CA 433434,NKA 98984,CJ 65326,NCW 89342,NKA 00060,NAT 98658,NKA 9879','NKA');
+    var fromNkandla = listAllRegsFrom('CA 433434,NKA 98984,CJ 65326,NCW 89342,NKA 00060,NAT 98658,NKA 9879','NKA');
     var expectedNkandlaRegNumbers = ["NKA 98984","NKA 00060","NKA 9879"];
-assert.deepEqual(FromNkandla ,expectedNkandlaRegNumbers);
+    assert.deepEqual(fromNkandla ,expectedNkandlaRegNumbers);
 
     var FromCapeTownCity = listAllRegsFrom('CA 433434,NKA 98984,CA 40050,CJ 65326,NCW 89342,NKA 00060,NAT 98658','CA');
     var expectedCTCRegNumbers = ["CA 433434","CA 40050"];
-assert.deepEqual(FromCapeTownCity ,expectedCTCRegNumbers);
+    assert.deepEqual(FromCapeTownCity ,expectedCTCRegNumbers);
 
 var isFrom = function(regNum, location){
     var validation = regNum.startsWith(location);
