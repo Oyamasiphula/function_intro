@@ -1,29 +1,32 @@
+const assert = require('assert');
 const date = new Date('2010-04-01');
-console.log(date);
-var weekDays = ['Sunday','Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-var sameWeekday = function(today, dayAgo){
-      var isSameDay = today === dayAgo;
-      console.log(isSameDay);
-      return isSameDay;
+var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+var sameWeekday = function(today, dayAgo) {
+    var isSameDay = today === dayAgo;
+    console.log(isSameDay);
+    return isSameDay;
 }
+// instead I wanted to generate actual values for my parameters below is for day ago
 var pastDay = weekDays[date.getDay()];
+
+// instead I wanted to generate actual values for my parameters below is for todaysDay
 var currentDay = new Date();
-
 const todaysDayIs = weekDays[currentDay.getDay()];
-sameWeekday(todaysDayIs, pastDay)
+// testing sameWeekday function
+assert.equal(sameWeekday(todaysDayIs, pastDay), false)
 
 
 
-var isSameWeekday = function(todaysDate, dateAgo){
+var isItTheSameWeekday = function(todaysDate, dateAgo) {
     const currentDate = new Date(todaysDate);
     var currentDay = weekDays[currentDate.getDay()];
     console.log(currentDay);
     const pastDate = new Date(dateAgo);
     var pastDay = weekDays[pastDate.getDay()];
     console.log(pastDay);
-      var isSameDay = currentDay === pastDay;
-      return isSameDay;
+    var isSameDay = currentDay === pastDay;
+    return isSameDay;
 }
-
-console.log(isSameWeekday('2016-11-07','2010-03-01'));
+assert.equal(isItTheSameWeekday('2016-11-07', '2010-03-01'),true)
