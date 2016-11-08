@@ -5,7 +5,6 @@ var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'
 
 var sameWeekday = function(today, dayAgo) {
     var isSameDay = today === dayAgo;
-    console.log(isSameDay);
     return isSameDay;
 }
 // instead I wanted to generate actual values for my parameters below is for day ago
@@ -17,15 +16,13 @@ const todaysDayIs = weekDays[currentDay.getDay()];
 // testing sameWeekday function
 assert.equal(sameWeekday(todaysDayIs, pastDay), false)
 
-
-
 var isItTheSameWeekday = function(todaysDate, dateAgo) {
     const currentDate = new Date(todaysDate);
     var currentDay = weekDays[currentDate.getDay()];
-    console.log(currentDay);
+
     const pastDate = new Date(dateAgo);
     var pastDay = weekDays[pastDate.getDay()];
-    console.log(pastDay);
+
     var isSameDay = currentDay === pastDay;
     return isSameDay;
 }
