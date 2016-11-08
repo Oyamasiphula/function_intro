@@ -5,11 +5,8 @@ var weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturda
 var isWeekday = function(actualDay){
   console.log(date.getDay());
   //look up the week day text string from the Array
-  // console.log(weekDays[date.getDay()]);
-  // console.log(weekDays.indexOf(actualDay));
-  // console.log(weekDays.indexOf(weekDays[date.getDay()]));
-  var isIt = weekDays.indexOf(actualDay) <= weekDays.indexOf(weekDays[date.getDay()]);
-  console.log(isIt);
+  var checkIfDuringWeek = weekDays.indexOf(actualDay) <= weekDays.indexOf(weekDays[date.getDay()]);
+  console.log(checkIfDuringWeek);
 }
 
 // isWeekday("Monday");
