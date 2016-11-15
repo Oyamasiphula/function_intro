@@ -1,7 +1,7 @@
 const assert = require('assert');
 const date = new Date('2010-04-01');
 
-var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'];
 
 var sameWeekday = function(today, dayAgo) {
     var isSameDay = today === dayAgo;
