@@ -24,7 +24,6 @@ var isWeekday = function(day){
       var isWeekdayValidation =! day.startsWith('S');
       return isWeekdayValidation;
 };
-
 // assert.equal(isWeekdayEvaluation("Monday"),true);
 // assert.equal(isWeekdayEvaluation("Tuesday"),true);
 assert.equal(isWeekday("Wednesday"),true);
